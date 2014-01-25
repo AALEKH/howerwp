@@ -1,0 +1,49 @@
+#image-of-fullscreenslider
+{
+  position:absolute;
+  width: 800px;
+  height: 500px;
+  top:0px;
+  left:0px;
+ 
+}
+
+#fullscreenslider
+{
+  width: 800px;
+  height: 500px;
+  position:relative;
+  border-width:10px;
+  border-style:solid;
+  border-color:#AADBA0;
+  border-radius:10px;
+}
+#myFunction
+{
+  position:absolute;
+  margin-top:471px;
+   margin-left:-3px;
+  height:30px;
+  width:30px;
+  border-radius:10px;
+  background-color:#D2D2D2;
+  border-width:2px;
+  border-style:solid;
+  border-color:#A5A5A5;
+  z-index=1;
+}
+
+#myFunctionback
+{
+  position:absolute;
+  margin-top:450px;
+  margin-left:770px;
+  height:30px;
+  width:30px;
+  border-radius:10px;
+  background-color:#D2D2D2;
+  border-width:2px;
+  border-style:solid;
+  border-color:#A5A5A5;
+  z-index=1;
+}
