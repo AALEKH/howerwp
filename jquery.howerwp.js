@@ -16,8 +16,8 @@
                           $('#fullscreenslider').css( 'height', '250px' );
                           $('#image-of-fullscreenslider').css( 'width', '400px' );
                           $('#image-of-fullscreenslider').css( 'height', '250px' );
-                          $('#myFunctionbacksmaller').css( 'margin-top', '200px' );
-                          $('#myFunctionbacksmaller').css( 'margin-left', '368px' );
+                          $('#myFunctionback').css( 'margin-top', '200px' );
+                          $('#myFunctionback').css( 'margin-left', '368px' );
                           $('#myFunction').css( 'margin-top', '220px' );
                         }
                   
@@ -50,28 +50,3 @@ function myFunction(){
   }
   
 }
-
-function myFunctionback(){
- 
- if( b == '0' ){
-  images[a-1].css("visibility","visible");
-  images[b].css("visibility","hidden");
-  b=a-1; 
- }
- else if ( b == a-1){
-  images[b-1].css("visibility","visible");
-  images[b].css("visibility","hidden");
-  b=b-1;  
- }
- else{
-  images[b-1].css("visibility","visible");
-  images[b].css("visibility","hidden");
-  b=b-1;  
-  }
-  
-}
-                });
-
-        };
-
-}(jQuery));
