@@ -48,31 +48,31 @@ function howerwp_styles() {
 add_shortcode("howerwp", "fwds_howerwp_slider");
 function fwds_howerwp_slider($atts) {
   extract(shortcode_atts(array(
-      'no_of_images' => 1,
-      'images[0]' => 'http://s.w.org/about/images/wordpress-logo-notext-bg.png'
+      'bordercolor' => '#D4FACD',
+      'image1' => 'http://s.w.org/about/images/wordpress-logo-notext-bg.png',
+      'image2' => 'http://s.w.org/about/images/codeispoetry-bg.png',
+      'image3' => 'http://s.w.org/about/images/wordpress-logo-simplified-bg.png',
+      'image4' => 'http://s.w.org/about/images/wordpress-logo-textonly-bg.png',
+      'image5' => 'http://s.w.org/about/images/wordpress-logo-hoz-bg.png'
    ), $atts));
   $plugins_url = plugins_url();
-$i=0; 
+$i=0;
+$config_array = array(
+            'bordercolor' => $bordercolor
+        );
 
-$html =''; 
+    wp_localize_script('howerwp.initialize', 'setting', $config_array);
 
-while ( i < no_of_images ) {
-      if(i == 0)
-      {
-        $html.='<img src='.site_url($images[i], 'https').' id="image-of-fullscreenslider" style="visibility: visible;"/>';
-      }
-      else {
-            $html.='<img src='.site_url($images[i], 'https').' id="image-of-fullscreenslider" style="visibility: hidden;"/>';
-
-      }
-}
-
-echo '<div id="fullscreenslider">'.$html.'
+echo '<div id="fullscreenslider">
+      <img src="'.$image1.'" id="image-of-fullscreenslider" style="visibility: visible;"/>
+      <img src="'.$image2.'" id="image-of-fullscreenslider" style="visibility: hidden;"/>
+      <img src="'.$image3.'" id="image-of-fullscreenslider" style="visibility: hidden;"/>
+      <img src="'.$image4.'" id="image-of-fullscreenslider" style="visibility: hidden;"/>
+      <img src="'.$image5.'" id="image-of-fullscreenslider" style="visibility: hidden;"/>
    <div onclick="myFunction()" id="myFunction"></div>
-  </br>
-  <div onclick="myFunctionback()" id="myFunctionback"></div>
-</div>';
-
-  
+   </br>
+   <div onclick="myFunctionback()" id="myFunctionback"></div>
+</div>'; 
 }
+
 ?>
